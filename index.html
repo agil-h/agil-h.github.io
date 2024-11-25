@@ -13,9 +13,11 @@
   </head>
   <body id="home">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm bg-primary fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-sm fixed-top" style="background-color: #ff7700">
       <div class="container">
-        <a class="navbar-brand" href="#">Sahabat</a>
+        <a class="navbar-brand" href="#">
+          <img src="img/sahabat.jpg" alt="" width="30" height="28" />
+        </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -98,7 +100,7 @@
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
             <div class="card">
-              <img src="img/bg-bar-bar.jpg" class="card-img-top" alt="Gallery 1" />
+              <img src="img/agil.jpg" class="card-img-top" alt="Gallery 1" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
@@ -106,7 +108,7 @@
           </div>
           <div class="col-md-4 mb-3">
             <div class="card">
-              <img src="img/bg-bar-bar.jpg" class="card-img-top" alt="Gallery 2" />
+              <img src="img/abduh.jpg" class="card-img-top" alt="Gallery 2" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
@@ -114,7 +116,7 @@
           </div>
           <div class="col-md-4 mb-3">
             <div class="card">
-              <img src="img/bg-bar-bar.jpg" class="card-img-top" alt="Gallery 3" />
+              <img src="img/basit.jpg" class="card-img-top" alt="Gallery 3" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
@@ -122,7 +124,7 @@
           </div>
           <div class="col-md-4 mb-3">
             <div class="card">
-              <img src="img/bg-sahabat.jpg" class="card-img-top" alt="Gallery 4" />
+              <img src="img/misbah.jpg" class="card-img-top" alt="Gallery 4" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
@@ -130,7 +132,23 @@
           </div>
           <div class="col-md-4 mb-3">
             <div class="card">
-              <img src="img/bg-sahabat.jpg" class="card-img-top" alt="Gallery 5" />
+              <img src="img/rayhan.jpg" class="card-img-top" alt="Gallery 5" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/iksan.jpg" class="card-img-top" alt="Gallery 5" />
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 mb-3">
+            <div class="card">
+              <img src="img/renal.jpg" class="card-img-top" alt="Gallery 5" />
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               </div>
@@ -161,27 +179,35 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-8">
-            <form>
+            <div class="alert alert-danger alert-dismissible fade show btn-myalert d-none" role="alert">
+              <strong>Terima kasih!</strong> Pesan anda sudah kami terima.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <form name="Sahabat-barbar">
               <div class="mb-6">
-                <label for="nmae" class="form-label">Nama Lengkap</label>
-                <input type="text" class="form-control" id="name" aria-describedby="name" />
+                <label for="name" class="form-label">Nama Lengkap</label>
+                <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email </label>
-                <input type="email" class="form-control" id="email" aria-describedby="email" />
+                <input type="email" class="form-control" id="email" aria-describedby="email" name="email" />
               </div>
               <div class="mb-3">
                 <label for="pesan" class="form-label">Pesan</label>
-                <textarea class="form-control" id="pesan" rows="3"></textarea>
+                <textarea class="form-control" id="pesan" rows="3" name="pesan"></textarea>
               </div>
-              <button type="submit" class="btn btn-primary">Kirim</button>
+              <button type="submit" class="btn btn-warning btn-kirim">Kirim</button>
+              <button class="btn btn-warning btn-loading d-none" type="button" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
             </form>
           </div>
         </div>
       </div>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
-          fill="#0d6efd"
+          fill="#ff7700"
           fill-opacity="1"
           d="M0,96L80,112C160,128,320,160,480,149.3C640,139,800,85,960,90.7C1120,96,1280,160,1360,192L1440,224L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z"
         ></path>
@@ -190,11 +216,38 @@
     <!-- akhir -->
 
     <!-- Footer -->
-    <footer class="bg-primary text-white text-center pb-5">
+    <footer class="text-white text-center pb-5" style="background-color: #ff7700">
       <p>Created with <i class="bi bi-instagram text-danger"></i> by <a href="https://www.instagram.com/sahabat_barbar_family/" class="text-white fw-bold">Sahabat Barbar</a></p>
     </footer>
     <!-- akhir -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbzOQ6F4NAEFVMqS2dRQLomfU2kDwhE3vsvrVNuGyw-HGUnhUYB2-cFcQaRmXhLj0Npd/exec';
+      const form = document.forms['Sahabat-barbar'];
+      const btnkirim = document.querySelector('.btn-kirim');
+      const btnLoading = document.querySelector('.btn-loading');
+      const myAlert = document.querySelector('.btn-myalert');
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        //ketika tombol submit diklik
+        //tampilkan tombol loading, hilangkan tombol kirim
+        btnLoading.classList.toggle('d-none');
+        btnkirim.classList.toggle('d-none');
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+          .then((response) => {
+            //tampilkan tombol kirim, hilangkan tombol loading
+            btnLoading.classList.toggle('d-none');
+            btnkirim.classList.toggle('d-none');
+            //tampilkan alert
+            myAlert.classList.toggle('d-none');
+            //reset formnya
+            form.reset();
+            console.log('Success!', response);
+          })
+          .catch((error) => console.error('Error!', error.message));
+      });
+    </script>
   </body>
 </html>

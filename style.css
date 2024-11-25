@@ -9,3 +9,6 @@
 section {
   padding-top: 5rem;
 }
+section.jumbotron h1 {
+  font-family: 'Bungee Spice', serif;
+}
